@@ -1,0 +1,45 @@
+// app.js
+const tg = window.Telegram.WebApp;
+
+// Функция инициализации
+function initApp() {
+    // Проверяем, запущено ли в Telegram
+    const isTelegram = !!tg.initData;
+    
+    if (isTelegram) {
+        // Режим Telegram
+        tg.ready();
+        tg.expand();
+        console.log('Запущено в Telegram');
+    } else {
+        // Режим браузера (для разработки)
+        console.log('Запущено в браузере');
+        // Эмулируем тему
+        applyFallbackTheme();
+    }
+    
+    applyTheme();
+}
+
+// Применяем настоящую или тестовую тему
+function applyTheme() {
+    const theme = tg.themeParams || {};
+    
+    document.documentElement.style.setProperty('--tg-theme-bg-color', 
+        theme.bg_color || '#ffffff');
+    document.documentElement.style.setProperty('--tg-theme-text-color', 
+        theme.text_color || '#222222');
+}
+
+// Тема для разработки в браузере
+function applyFallbackTheme() {
+    tg.themeParams = {
+        bg_color: '#18222d',
+        text_color: '#ffffff',
+        button_color: '#2ea6ff',
+        button_text_color: '#ffffff'
+    };
+}
+
+// Запускаем приложение
+document.addEventListener('DOMContentLoaded', initApp);
