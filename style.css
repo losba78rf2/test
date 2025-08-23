@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--tg-theme-bg-color, #18222d);
+    color: var(--tg-theme-text-color, #ffffff);
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--tg-theme-text-color, #ffffff);
+}
+
+p {
+    margin-bottom: 30px;
+    color: var(--tg-theme-hint-color, #7c8b9a);
+    font-size: 16px;
+}
+
+/* Основная кнопка в стиле Telegram */
+.tg-button {
+    width: 100%;
+    background: var(--tg-theme-button-color, #2ea6ff);
+    color: var(--tg-theme-button-text-color, #ffffff);
+    border: none;
+    padding: 16px 24px;
+    margin: 12px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.tg-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.tg-button:active {
+    transform: translateY(0);
+}
+
+/* Вторичная кнопка */
+.tg-button.secondary {
+    background: var(--tg-theme-secondary-bg-color, #2d4263);
+    color: var(--tg-theme-button-text-color, #ffffff);
+}
+
+/* Для красивого отображения в браузере */
+body:not(.telegram-environment) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body:not(.telegram-environment) .tg-button {
+    background: #2ea6ff;
+    box-shadow: 0 4px 12px rgba(46, 166, 255, 0.3);
+}
