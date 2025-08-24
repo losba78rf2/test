@@ -14,6 +14,12 @@ const passwordInput = document.getElementById("passwordInput");
 const GAME_LOGIN = 'ctrlsh0t';
 const GAME_PASSWORD = 'SYNTHZONE';
 
+const GOG_LOG = 'gognigga';
+const GOG_PASS = 'fuck';
+
+const GREY_LOG = 'greyGATTO';
+const PASSGREY = 'homestuck4ever';
+
 if (startBtn && loginForm) {
   startBtn.addEventListener("click", () => {
     loginForm.classList.remove("hidden");
@@ -34,7 +40,12 @@ if (startBtn && loginForm) {
     if (login === GAME_LOGIN && pass === GAME_PASSWORD) {
       try { tg?.showAlert("Доступ разрешён. Переходим на страницу 2 ✨"); } catch(e){}
       window.location.href = "page2.html";
-    } else {
+    } else if (login === GOG_LOG && pass === GOG_PASS){
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу гога✨"); } catch(e){}
+      window.location.href = "page2.html";
+    }
+    
+    else {
       try { tg?.showAlert("Неверный логин или пароль."); } catch(e){ alert("Неверный логин или пароль."); }
     }
   });
