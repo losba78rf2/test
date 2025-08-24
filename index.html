@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Mini App</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CTRL SH0T — Mini App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Мое Telegram приложение</h1>
-        <p>Нажми на кнопку чтобы увидеть Telegram alert</p>
-        
-        <!-- Кнопка в стиле Telegram -->
-        <button class="tg-button" onclick="showTelegramAlert()">
-            Показать alert ✅
-        </button>
-        
-        <button class="tg-button secondary" onclick="closeApp()">
-            Закрыть приложение ❌
-        </button>
-    </div>
+  <div class="container">
+    <h1>CTRL SH0T вход в админку</h1>
+    <p class="subtitle">Нажми «Начать», чтобы зайти, твои личные данный спрятаны в ээ да там</p>
 
-    <script src="app.js"></script>
+    <button class="tg-button" id="startBtn">Начать</button>
+
+    <!-- Форма скрыта до клика -->
+    <form id="loginForm" class="card hidden">
+      <label class="label">Логин</label>
+      <input class="input" id="loginInput" placeholder="введи логин" autocomplete="off" />
+
+      <label class="label">Пароль</label>
+      <input class="input" id="passwordInput" placeholder="введи пароль" autocomplete="off" />
+
+      <button type="submit" class="tg-button full">Войти</button>
+    </form>
+  </div>
 </body>
 </html>
