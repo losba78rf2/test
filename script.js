@@ -6,6 +6,7 @@ try { tg?.expand(); } catch(e){}
 
 // Главная страница: показать форму после клика
 const startBtn = document.getElementById("startBtn");
+const hintbt = document.getElementById("hint");
 const loginForm = document.getElementById("loginForm");
 const loginInput = document.getElementById("loginInput");
 const passwordInput = document.getElementById("passwordInput");
@@ -19,6 +20,10 @@ const GOG_PASS = 'fuck';
 
 const GREY_LOG = 'greyGATTO';
 const PASSGREY = 'homestuck4ever';
+
+hintbt.addEventListener("click", () => {
+  try { tg?.showAlert("message from https://losba78rf2.github.io/test/script.js : error ты идиот не прописал ниче"); } catch(e){}
+})
 
 if (startBtn && loginForm) {
   startBtn.addEventListener("click", () => {
