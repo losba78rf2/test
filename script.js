@@ -21,21 +21,27 @@ const GOG_PASS = 'fuck';
 const GREY_LOG = 'greyGATTO';
 const PASSGREY = 'homestuck4ever';
 
+const DRP_LOG = "drp403"
+const DRP_PASS = "hardelectro"
+
+const LOS_LOG = "losba"
+const LOS_PASS = "MUS_SUCKS"
+
 hintbt.addEventListener("click", () => {
   try { 
     // Проверяем наличие Telegram WebApp API
     if (window.Telegram && Telegram.WebApp) {
-      Telegram.WebApp.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced");
+      Telegram.WebApp.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions");
     } else if (window.tg && tg.showAlert) {
       // Альтернативный вариант (для старых версий)
-      tg.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced"); 
+      tg.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions"); 
     } else {
-      console.log("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced");
+      console.log("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions");
       // Фолбэк для отладки вне Telegram
       alert("Сообщение: Ваше сообщение здесь");
     }
   } catch(e) {
-    console.error("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced", e);
+    console.error("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions", e);
   }
 });
 
@@ -65,6 +71,15 @@ if (startBtn && loginForm) {
     } else if (login === GREY_LOG && pass === PASSGREY) {
       try { tg?.showAlert("Доступ разрешён. Переходим на страницу gcgc009✨"); } catch(e){}
       window.location.href = "https://www.mspaintadventures.ru/";
+    } else if (login === DRP_LOG && pass === DRP_PASS) {
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
+      window.location.href = "drp.html";
+    } else if (login === LOS_LOG && pass === LOS_PASS) {
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу Losba✨"); } catch(e){}
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
+      try { tg?.showAlert("Доступ разрешён. Хм... Видимо здесь нет страницы для" + LOS_LOG); } catch(e){}
     }
     
     else {
@@ -109,3 +124,5 @@ if (typeof window !== "undefined" && window.location.pathname.includes("page2.ht
     try { tg?.showAlert("Ты нажал кнопку №2 🚀"); } catch(e){ alert("Кнопка 2"); }
   });
 }
+
+
