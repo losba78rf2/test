@@ -44,7 +44,18 @@ hintbt.addEventListener("click", () => {
     console.error("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions", e);
   }
 });
-
+async function showAlerts() {
+  console.log("hi, works")
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу Losba✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Переходим на страницу DRP403✨");
+  await Telegram.WebApp.showAlert("Доступ разрешён. Хм... Видимо здесь нет страницы для" + LOS_LOG);
+}
 if (startBtn && loginForm) {
   startBtn.addEventListener("click", () => {
     loginForm.classList.remove("hidden");
@@ -75,11 +86,7 @@ if (startBtn && loginForm) {
       try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
       window.location.href = "drp.html";
     } else if (login === LOS_LOG && pass === LOS_PASS) {
-      try { tg?.showAlert("Доступ разрешён. Переходим на страницу Losba✨"); } catch(e){}
-      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
-      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
-      try { tg?.showAlert("Доступ разрешён. Переходим на страницу DRP403✨"); } catch(e){}
-      try { tg?.showAlert("Доступ разрешён. Хм... Видимо здесь нет страницы для" + LOS_LOG); } catch(e){}
+      showAlerts()
     }
     
     else {
