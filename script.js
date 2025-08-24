@@ -42,7 +42,10 @@ if (startBtn && loginForm) {
       window.location.href = "page2.html";
     } else if (login === GOG_LOG && pass === GOG_PASS){
       try { tg?.showAlert("Доступ разрешён. Переходим на страницу гога✨"); } catch(e){}
-      window.location.href = "page2.html";
+      window.location.href = "gog.html";
+    } else if (login === GREY_LOG && pass === PASSGREY) {
+      try { tg?.showAlert("Доступ разрешён. Переходим на страницу gcgc009✨"); } catch(e){}
+      window.location.href = "https://www.mspaintadventures.ru/";
     }
     
     else {
