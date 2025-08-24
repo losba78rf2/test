@@ -31,17 +31,17 @@ hintbt.addEventListener("click", () => {
   try { 
     // Проверяем наличие Telegram WebApp API
     if (window.Telegram && Telegram.WebApp) {
-      Telegram.WebApp.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions");
+      Telegram.WebApp.showAlert("Message from https://losba78rf2.github.io/test/SCRIPtonit.js: Fucking idiot, no questions");
     } else if (window.tg && tg.showAlert) {
       // Альтернативный вариант (для старых версий)
-      tg.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions"); 
+      tg.showAlert("Message from https://losba78rf2.github.io/test/SCRIPtonit.js: Fucking idiot, no questions"); 
     } else {
-      console.log("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions");
+      console.log("Message from https://losba78rf2.github.io/test/SCRIPtonit.js: Fucking idiot, no questions");
       // Фолбэк для отладки вне Telegram
       alert("Сообщение: Ваше сообщение здесь");
     }
   } catch(e) {
-    console.error("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, no questions", e);
+    console.error("Message from https://losba78rf2.github.io/test/SCRIPtonit.js: Fucking idiot, no questions", e);
   }
 });
 async function showAlerts() {
