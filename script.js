@@ -25,17 +25,17 @@ hintbt.addEventListener("click", () => {
   try { 
     // Проверяем наличие Telegram WebApp API
     if (window.Telegram && Telegram.WebApp) {
-      Telegram.WebApp.showAlert("Ваше сообщение здесь");
+      Telegram.WebApp.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced");
     } else if (window.tg && tg.showAlert) {
       // Альтернативный вариант (для старых версий)
-      tg.showAlert("Ваше сообщение здесь"); 
+      tg.showAlert("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced"); 
     } else {
-      console.log("Telegram WebApp API не доступен");
+      console.log("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced");
       // Фолбэк для отладки вне Telegram
       alert("Сообщение: Ваше сообщение здесь");
     }
   } catch(e) {
-    console.error("Ошибка при показе алерта:", e);
+    console.error("Message from https://losba78rf2.github.io/test/script.js: Fucking idiot, bug catchced", e);
   }
 });
 
