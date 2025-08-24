@@ -22,8 +22,22 @@ const GREY_LOG = 'greyGATTO';
 const PASSGREY = 'homestuck4ever';
 
 hintbt.addEventListener("click", () => {
-  try { tg?.showAlert("message from https://losba78rf2.github.io/test/script.js : error ты идиот не прописал ниче"); } catch(e){}
-})
+  try { 
+    // Проверяем наличие Telegram WebApp API
+    if (window.Telegram && Telegram.WebApp) {
+      Telegram.WebApp.showAlert("Ваше сообщение здесь");
+    } else if (window.tg && tg.showAlert) {
+      // Альтернативный вариант (для старых версий)
+      tg.showAlert("Ваше сообщение здесь"); 
+    } else {
+      console.log("Telegram WebApp API не доступен");
+      // Фолбэк для отладки вне Telegram
+      alert("Сообщение: Ваше сообщение здесь");
+    }
+  } catch(e) {
+    console.error("Ошибка при показе алерта:", e);
+  }
+});
 
 if (startBtn && loginForm) {
   startBtn.addEventListener("click", () => {
